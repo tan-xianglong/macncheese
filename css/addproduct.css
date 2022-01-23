@@ -15,3 +15,7 @@
 .container-sm {
   max-width: 600px;
 }
+
+main {
+  margin: 100px;
+}
