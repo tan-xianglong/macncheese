@@ -1,4 +1,7 @@
 /* Style for Nav Bar */
+body {
+  background-color: #FBE6C2;
+}
 
 .navbar-brand{
 margin-left: 50px;
