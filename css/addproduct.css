@@ -1,0 +1,21 @@
+#price::-webkit-outer-spin-button,
+#price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#productNameBlock, #productDescBlock, #priceBlock, #quantityBlock, #imageBlock {
+  visibility: hidden;
+}
+
+#imgPreview {
+  max-width: 300px;
+}
+
+.container-sm {
+  max-width: 600px;
+}
+
+main {
+  margin: 100px;
+}
