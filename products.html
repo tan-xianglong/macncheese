@@ -14,9 +14,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
-
     <!-- Custom CSS -->
     <style>
+        /* Color Palette
+        #FBE6C2 - rgb(251, 230, 194) Beige
+        #F0C929 - rgb(240, 201, 41) Yellow
+        #F48B29 - rgb(244, 139, 41) Orange
+        #AC0D0D - rgb(172, 13, 13) Vermillion
+         */
+
         /* Card hover effect*/
         .card:hover {
             transform: scale(1.05);
@@ -26,12 +32,51 @@
         /* Jumbotron */
         .jumbotron {
             margin:0;
-            background: 
-            url(/css/des-images/pdt-top-image-pasta-bowl.jpg);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),
+            url(./images/pdt-top-image-pasta-bowl.jpg);
             background-repeat: no-repeat;
-            color:white !important;
-            height:340px;
-}
+            background-size: cover;
+            color:white;
+            height:300px;
+        }
+
+        .jumbotron-text {
+            align-self:flex-end;
+            width: 100%;
+        }
+
+        .jumbotron-text > h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .jumbotron-text > p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* Button Color */
+        .btn-vermillion {
+            background-color: #AC0D0D;
+            color: #fff
+        }
+
+        /* Sticky sidebar for desktop*/
+        .sticky-sidebar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 15%;
+        }
+
+    /* Mobile Media Queries */
+    @media screen and (max-width: 768px) {
+        /* Hide sticky sidebar */
+        .sticky-sidebar {
+            display: none;
+        }
+
+        .sidebar-container {
+            display: none;
+        }
+    }
 
     </style>
     <title>Our Products</title>
@@ -70,59 +115,73 @@
 
     <!-- Section 1: Jumbotron + Short description -->   
         <!-- Jumbotron Image -->
-        <div class="jumbotron jumbotron-fluid mt-4">
-            <div class="container">
-              <h1 class="display-4 text-warning">Delicious, Delectable, Decadent</h1>
-              <p class="lead">Our pastas are made in-house and all our ingredients are sourced locally.</p>
+        <div class="jumbotron jumbotron-fluid d-flex" style="margin-top:85px;">
+            <div class="container jumbotron-text">
+              <h1 class="display-6 text-warning">Delicious, Delectable, Decadent</h1><br>
+              <p class="lead">Our pastas are made in-house and all our ingredients are sourced locally</p>
             </div>
           </div>
     <!-- Section 1 End -->
 
     <!-- Section 2: 3x3 Product cards with product name + price; Sticky Side Bar; Modals for each product -->
         <div class="container-fluid">
-            <div class="row row-cols-2">
+            <div class="row">
                 <!-- Sticky Sidebar Filter desktop -->
-                <div class="col-2 my-4">
-                    <p>Sticky Sidebar placeholder</p>
-                    <p>All</p>
-                    <p>Beef</p>
-                    <p>Chicken</p>
-                    <p>Seafood</p>
+                <div class="col-2 my-4 sidebar-container">
+                    <div class="container-fluid sticky-sidebar">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="all" name="all" value="something" checked>
+                            <label class="form-check-label" for="all">All</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">
+                            <label class="form-check-label" for="check1">Beef</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                            <label class="form-check-label" for="check2">Chicken</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something">
+                            <label class="form-check-label" for="check3">Seafood</label>
+                          </div>
+                        </form>
+                      </div>
                 </div>
                 <div class="col-10">
                     <!-- Cards -->
                     <div class="row row-cols-1 row-cols-md-3 p-2">
-                        <div class="col my-4">
+                        <div class="col-md-4 my-4">
                         <div class="card h-100">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#pdt1Modal" style="text-decoration:none; color:black">
-                            <img src="/css/des-images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
+                            <img src="./images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div></a>
                         </div>
-                        <div class="col my-4">
+                        <div class="col-md-4 my-4">
                         <div class="card h-100">
-                            <img src="/css/des-images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
+                            <img src="./images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a short card.</p>
                             </div>
                         </div>
                         </div>
-                        <div class="col my-4">
+                        <div class="col-md-4 my-4">
                         <div class="card h-100">
-                            <img src="/css/des-images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
+                            <img src="./images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
                             </div>
                         </div>
                         </div>
-                        <div class="col my-4">
+                        <div class="col-md-4 my-4">
                         <div class="card h-100">
-                            <img src="/css/des-images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
+                            <img src="./images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -133,11 +192,7 @@
                 </div>
             </div>
         </div>
-        <!-- Side Bar https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp -->
-
-        <!-- Modal https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-modals.php 
-        https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=creating-row-columns-inside-modal
-        -->
+   
     <!-- Section 2 End -->
 
     <!-- Modal box -->
@@ -145,17 +200,16 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Product Information</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <img src="css/des-images/pdt-top-image-pasta-bowl.jpg" class="w-75" alt="pdt1">
+                        <img src="./images/pdt-top-image-pasta-bowl.jpg" class="w-100" alt="pdt1">
                     </div>
-                    <div class="row mt-2">
-                        <p class="fs-5">Mac and Cheese Chicken<h3>
+                    <div class="row mt-1">
+                        <p class="fs-4 fw-bold">Mac and Cheese Chicken<h3>
                     </div>
-                    <div class="row mb-1">
+                    <div class="row">
                         <p class="fst-italic">$12.00</p>
                     </div>
                     <!-- Description -->
@@ -171,7 +225,7 @@
                         <div class="col-12">
                             <div class="mb-2">
                                 <label class="form-label" for="quantity">Quantity:</label>
-                                <input type="number" id="quantity" class="form-control-sm" min="1" max="50">
+                                <input type="number" id="quantity" class="form-control-sm" min="1" max="20">
                             </div>
                         </div>
                     </div>
@@ -186,9 +240,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <!-- To add modal for add to cart button -->
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-success">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -199,7 +252,7 @@
 
 
     <!-- Footer -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-bottom" style="background-color:#F48B29"">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#F48B29">
         <div class="container-fluid">
             <p class="navbar-text pt-0" style="color: #AC0D0D;">&copy; Mac & Cheese 2022</p>
             <ul class="nav justify-content-center pt-2">
