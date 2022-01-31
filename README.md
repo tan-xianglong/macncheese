@@ -1,27 +1,75 @@
 # Mac and Cheese
 
-The purpose of this program is to generate random message using 3 randomized message parts and combine them into a string.
+This is the final project assignment for the SG United Mid-Career Pathways Program - Company Training (SGUP-CT) which is collaboratively developed by 4 team members.
+
+Visit [Mac & Cheese Store](https://google.com) to see the full site.
 
 ## Table of Contents
 * [General Information](#general-information)
-* [Programming Tools Used](#programming-tools-used)
-* [Features & Concepts](#features)
-* [How to use?](#how-to-use)
+* [Built With](#built-with)
+* [Pages and Components](#pages-and-components)
+  * [Navigation Bar](#navigation-bar)
+  * [Homepage](#homepage)
+  * [About Us](#about-us)
+  * [Products](#products)
+  * [Add Product Form](#add-product-form)
+
 
 ## General Information
-The intention of this project is to practice using git, github, markdown and visual studio code to create a project outside of the codeacademy environment. In addition, it is to practice basic JS coding.
+This objective of this project is to develop an E-commerce site using Agile methodology.
 
-## Programming Tools used
- * Javascript ES2015
- * Node v16.13.0
- * Git v2.15.0
- * Visual Studio Code v1.62.0
+The MVP of this project consist of the Home, About Us, Products and Form pages, all of which are responsive.
 
-## Concepts used
-* Arrays
-* Randomization of array items
-* String literals
+Implement a fully working web application with the following layers:
+Persistence: MySQL Database.
+Backend: REST API with Java and Spring Boot.
+Frontend: JavaScript + CSS + HTML.
 
-## How to use?
-Use Node.JS to run the JS file in your terminal:
-> node mixed-message.js
+
+## Built With
+ * HTML/CSS
+    * Bootstrap
+ * Javascript
+ * MySQL
+ * Java
+    * Spring Boot 
+
+
+## Pages and Components
+### Navigation Bar
+(To insert general description of your page such as purpose)
+#### Features
+(To input special features of your page)
+
+---
+
+### Homepage
+Static page that display the shop front and guides users to other parts of the web app
+#### Features
+(To input special features of your page)
+
+---
+
+### About Us
+Static page that contains the following parts:
+* A short project description
+* Team profiles (short bio, photo and role in the project)
+
+#### Features
+(To input special features of your page)
+
+---
+
+### Products
+Consumes API (POST and GET) and display information from database on the page.
+#### Features
+(To input special features of your page)
+
+---
+
+### Add Product Form
+Allows user to add products/post.
+#### Features
+(To input special features of your page)
+
+
