@@ -3,10 +3,6 @@ body {
   background-color: #FBE6C2;
 }
 
-.navbar-brand{
-margin-left: 50px;
-
-}
 
 .navbar-brand:hover {
   animation: shake 1s;
@@ -27,6 +23,7 @@ margin-left: 50px;
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+
 .nav-item{
 font-family: 'Lobster', cursive;   
 }
@@ -39,13 +36,22 @@ font-family: 'Lobster', cursive;
     background-color: #FBE6C2;
   }
 
-  /* Style for all Hover */
-a:hover {
-    border-bottom: solid #AC0D0D
+/* Style for Footer Hover */
+
+#footer a:hover {
+  border-bottom: solid black; 
+
+}
+
+/* End for Footer Hover */
+
+  /* Style for about us Hover */
+.profile a:hover {
+    border-bottom: solid black; 
+    padding: 5px;
   }
+/* End for about Us Hover */
 
-/* End of Style on NavBar & all Hover */
     
- 
 
- 
+
