@@ -37,7 +37,8 @@ Frontend: JavaScript + CSS + HTML.
 
 ## Pages and Components
 ### Navigation Bar
-(To insert general description of your page such as purpose)
+A text only horizontal navigation bar helps users in selecting topics or links of their interest.
+
 #### Features
 (To input special features of your page)
 
