@@ -1,13 +1,19 @@
 //Add product form validation
+const chkbox_beef = document.querySelector("#chkbox_beef");
+const chkbox_seafood = document.querySelector("#chkbox_seafood");
+const chkbox_chicken = document.querySelector("#chkbox_chicken");
+const chkbox_all = document.querySelector("#chkbox_all");
+const pdtNameField = document.querySelector("#productName");
+const pdtDesc = document.querySelector("#productDesc");
+const pdtPrice = document.querySelector("#price");
+const pdtQuantity = document.querySelector("#quantity");
+const pdtImg = document.querySelector("image");
+const clearBtn = document.querySelector("#clearBtn");
 
 // 1. Checkbox restriction
 //    a. create DOM variables for all checkboxes
 //    b. create event handler
 //    c. add event listener to call the event handler
-const chkbox_beef = document.querySelector("#chkbox_beef");
-const chkbox_seafood = document.querySelector("#chkbox_seafood");
-const chkbox_chicken = document.querySelector("#chkbox_chicken");
-const chkbox_all = document.querySelector("#chkbox_all");
 
 //event handler
 const disableChkbox = () => {
@@ -25,8 +31,28 @@ const disableChkbox = () => {
 //event listener
 chkbox_all.addEventListener("change", disableChkbox);
 
+//2. Clear form function
+const clearForm = () => {
+  chkbox_beef.reset();
+  chkbox_seafood.reset();
+  chkbox_chicken.reset();
+  chkbox_all.reset();
+  pdtNameField.reset();
+  pdtDesc.reset();
+  pdtPrice.reset();
+  pdtQuantity.reset();
+  pdtImg.reset();
+};
+
 //storing form values
-const name = document.querySelector("#productName").value;
+let productName = pdtNameField.value;
+let productDesc = pdtDesc.value;
+let price = pdtPrice.value;
+let quantity = pdtQuantity.value;
+let catBeef = chkbox_beef.value;
+let catSeafood = chkbox_seafood.value;
+let catChicken = chkbox_chicken.value;
+
 
 //dummy data for productItem array
 const macNcheese = new Product();
