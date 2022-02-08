@@ -10,7 +10,7 @@
 class Product {
   productItems = [];
   constructor() {}
-  addProduct(name, description, price, quantity, category, image) {
+  addProduct(name, description, price, quantity, category, image, createAt) {
     const item = {
       name: name,
       description: description,
@@ -18,6 +18,7 @@ class Product {
       quantity: quantity,
       category: category,
       image: image,
+      createAt: createAt,
     };
     this.productItems.push(item);
   }//end of addProduct method

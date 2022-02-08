@@ -20,7 +20,7 @@
         #FBE6C2 - rgb(251, 230, 194) Beige
         #F0C929 - rgb(240, 201, 41) Yellow
         #F48B29 - rgb(244, 139, 41) Orange
-        #AC0D0D - rgb(172, 13, 13) Vermillion
+        #AC0D0D - rgb(172, 13, 13) Vermilion
          */
 
         /* Card hover effect*/
@@ -42,6 +42,8 @@
 
         .jumbotron-text {
             align-self:flex-end;
+            margin: 0;
+            padding-left: 3%;
             width: 100%;
         }
 
@@ -51,12 +53,7 @@
 
         .jumbotron-text > p {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        /* Button Color */
-        .btn-vermillion {
-            background-color: #AC0D0D;
-            color: #fff
+            font-size: 1em;
         }
 
         /* Sticky sidebar for desktop*/
@@ -64,10 +61,29 @@
             position: -webkit-sticky;
             position: sticky;
             top: 15%;
+            
         }
 
+        /* Sidebar button style */
+        .sidebar-container .btn, .top-bar-container .btn {
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        /* Hide top bar for mobile */
+        .top-bar-container {
+            display: none;
+        }
+
+
+        /* Modal Text */
+        .modal-body .fs-4 {
+            margin-bottom: 0;
+        }
+
+
     /* Mobile Media Queries */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         /* Hide sticky sidebar */
         .sticky-sidebar {
             display: none;
@@ -75,6 +91,18 @@
 
         .sidebar-container {
             display: none;
+        }
+
+        /* Display top-bar for mobile */
+        .top-bar-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 80px;
+            z-index: 1000;
+            background-color: #FBE6C2;
         }
     }
 
@@ -85,31 +113,31 @@
     <!-- Header -->
         <!--Navigation Bar -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color:#F48B29">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="navbar-brand">
                     <img src="images/logo.png" alt="logo" width="100px" height="60px" >
                 </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav me-3 mb-0 mb-lg-0"> 
-                <li class="nav-item">
+                  <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" style="color: #AC0D0D;"><span class="h2 px-3">Home</span></a>
-                </li>
-                <li class="nav-item">
+                  </li>
+                  <li class="nav-item">
                     <a class="nav-link" href="#"><span class="h2 px-3" style="color: #AC0D0D;">About Us</span></a>
-                </li>
-                <li class="nav-item">
+                  </li>
+                  <li class="nav-item">
                     <a class="nav-link" href="#"><span class="h2 px-3" style="color: #AC0D0D;">Shop</span></a>
-                </li>
-                <li class="nav-item">
+                  </li>
+                  <li class="nav-item">
                     <a class="nav-link" href="#"><span class="h2 px-3" style="color: #AC0D0D;">Log In</span></a>
-                </li>
+                  </li>
                 </ul>
+              </div>
             </div>
-            </div>
-        </nav>
+          </nav>
         <!-- End of Navigation Bar -->
     <!-- Header End -->
 
@@ -118,18 +146,26 @@
         <div class="jumbotron jumbotron-fluid d-flex" style="margin-top:85px;">
             <div class="container jumbotron-text">
               <h1 class="display-6 text-warning">Delicious, Delectable, Decadent</h1><br>
-              <p class="lead">Our pastas are made in-house and all our ingredients are sourced locally</p>
+              <p>Our pastas are made in-house and all our ingredients are sourced locally</p>
             </div>
           </div>
     <!-- Section 1 End -->
 
-    <!-- Section 2: 3x3 Product cards with product name + price; Sticky Side Bar; Modals for each product -->
-        <div class="container-fluid">
+    <!-- Section 2: Area for Product Cards and filter bar -->
+        <div class="container position-relative">
             <div class="row">
-                <!-- Sticky Sidebar Filter desktop -->
-                <div class="col-2 my-4 sidebar-container">
-                    <div class="container-fluid sticky-sidebar">
-                          <div class="form-check">
+                <!-- Sticky Sidebar Filter Desktop -->
+                <div class="col-md-3 col-l-2 my-4 sidebar-container">
+                    <div class="container">
+                        <div class="btn-group-vertical">
+                            <button type="button" class="btn btn-warning">All</button>
+                            <button type="button" class="btn btn-warning">Beef</button>
+                            <button type="button" class="btn btn-warning">Chicken</button>
+                            <button type="button" class="btn btn-warning">Seafood</button>
+                        </div>
+
+                        <!-- Checkbox style for sidebar - to delete
+                        <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="all" name="all" value="something" checked>
                             <label class="form-check-label" for="all">All</label>
                           </div>
@@ -144,14 +180,25 @@
                           <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="check3" name="option3" value="something">
                             <label class="form-check-label" for="check3">Seafood</label>
-                          </div>
-                        </form>
-                      </div>
+                          </div> -->                  
+                    </div>
                 </div>
-                <div class="col-10">
+
+                <!-- Sticky Top Bar Filter Mobile !!!!! -->
+                <div class="col-md-12 top-bar-container">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-warning">All</button>
+                        <button type="button" class="btn btn-warning">Beef</button>
+                        <button type="button" class="btn btn-warning">Chicken</button>
+                        <button type="button" class="btn btn-warning">Seafood</button>
+                    </div>
+                </div>
+                <!-- End of Sticky Top Bar Filter Mobile -->
+                
                     <!-- Cards -->
-                    <div class="row row-cols-1 row-cols-md-3 p-2">
-                        <div class="col-md-4 my-4">
+                    <div class="col-md-9 col-l-10">
+                        <div class="row"> 
+                        <div class="col-6 col-md-4 my-4">
                         <div class="card h-100">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#pdt1Modal" style="text-decoration:none; color:black">
                             <img src="./images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
@@ -159,9 +206,10 @@
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
-                        </div></a>
                         </div>
-                        <div class="col-md-4 my-4">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 my-4">
                         <div class="card h-100">
                             <img src="./images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -170,7 +218,7 @@
                             </div>
                         </div>
                         </div>
-                        <div class="col-md-4 my-4">
+                        <div class="col-6 col-md-4 my-4">
                         <div class="card h-100">
                             <img src="./images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -179,7 +227,7 @@
                             </div>
                         </div>
                         </div>
-                        <div class="col-md-4 my-4">
+                        <div class="col-6 col-md-4 my-4">
                         <div class="card h-100">
                             <img src="./images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -248,38 +296,34 @@
     </div>
     <!-- End of pdt1Modal -->
 </div>   
-    <!--Add to cart modal  -->
-
 
     <!-- Footer -->
-    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#F48B29">
-        <div class="container-fluid">
-            <p class="navbar-text pt-0" style="color: #AC0D0D;">&copy; Mac & Cheese 2022</p>
-            <ul class="nav justify-content-center pt-2">
-              <li class="nav-item1 px-2 pt-4">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#F48B29"">
+        <div class="container-fluid" id="footer">
+            <ul class="nav">
+              <li class="nav-item1 px-2 pb-2">
                 <a class="nav-link1 active text-dark" href="#" >Home</a>
               </li>
-              <li class="nav-item1 px-2 pt-4">
+              <li class="nav-item1 px-2 pb-2 ">
                 <a class="nav-link1 text-dark" href="#">About Us</a>
               </li>
-              <li class="nav-item1 px-2 pt-4">
+              <li class="nav-item1 px-2 pb-2 ">
                 <a class="nav-link1 text-dark" href="#">Shop</a>
               </li>
-              <li class="nav-item1 px-2 pt-4">
+              <li class="nav-item1 px-2 pb-2 ">
                 <a class="nav-link1 text-dark" href="#">Log In</a>
-              </li>
-             
+              </li>             
             </ul>
+          
           <div class="socialplatform">
             <a href="#" class="nav-btn btn-light btn"><i class="bi bi-facebook text-dark p-1"></i></a>
             <a href="#" class="nav-btn btn-light btn"><i class="bi bi-twitter text-dark p-1"></i></a>
             <a href="#" class="nav-btn btn-light btn"><i class="bi bi-instagram text-dark p-1"></i></a>
-  
+            <p class="navbar-text pt-2" style="color: black;">&copy; Mac & Cheese 2022</p>
           </div>
   
         </div>
-     
-    </nav>
+      </nav> 
     <!-- End of footer -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
