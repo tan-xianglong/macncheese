@@ -36,6 +36,15 @@ legend {
   background-color: #bb0e0e;
 }
 
+#addBtn {
+  background-color: #0dac5d;
+  border: 1px solid #0dac5d;
+}
+
+#addBtn:hover {
+  background-color: #0ebb79;
+}
+
 input, textarea {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
