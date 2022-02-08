@@ -1,0 +1,1 @@
+const name = document.querySelector("#productName").value;
