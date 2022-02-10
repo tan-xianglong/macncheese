@@ -59,4 +59,4 @@ const displayItemDetails = (item) => {
   // document.querySelector("#itemImage").innerText = item.image;
   // document.querySelector("#itemDescription").innerText = item.description;
   // document.querySelector("#itemPrice").innerText = item.price;
-}
+};
