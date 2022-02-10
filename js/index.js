@@ -1,4 +1,3 @@
-//Add product form validation
 const chkbox_beef = document.querySelector("#chkbox_beef");
 const chkbox_seafood = document.querySelector("#chkbox_seafood");
 const chkbox_chicken = document.querySelector("#chkbox_chicken");
@@ -61,7 +60,7 @@ macNcheese.addProduct(
   "Our best seller, nothing beats the original",
   "20.00",
   "10",
-  "beef",
+  "['beef']",
   "./images/lobster.jpg",
   "today"
 );
@@ -71,17 +70,17 @@ macNcheese.addProduct(
   "Season with paprika and mixed herbs, this chicken will steal your heart",
   "17.00",
   "10",
-  "chicken",
+  `["chicken"]`,
   "./images/lobster.jpg",
   "today"
 );
 
 macNcheese.addProduct(
   "Supreme Mac N Cheese",
-  "It is supremem enough said.",
+  "It is supremem enough said. <br>Ingredients: Chicken and Seafood.",
   "25.00",
   "10",
-  "all",
+  "['chicken', 'seafood']",
   "./images/lobster.jpg",
   "today"
 );
