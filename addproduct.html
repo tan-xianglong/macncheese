@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/addproduct2.css" />
+  <link rel="stylesheet" href="./css/addproduct.css" />
 </head>
 <body>
     <!--Navigation Bar -->
@@ -47,7 +47,7 @@
 
   <!-- End of Navigation Bar -->
   <main>
-    <form>
+    <form action="" method="post">
       <fieldset class="grid">
         <legend>Add Product</legend>
         <label for="productName">Product Name:</label>
@@ -97,7 +97,7 @@
         <div></div>
         <div>
           <button type="submit" class="button" id="addBtn">Add</button>
-          <button type="submit" class="button" id="clearBtn">Clear</button>
+          <button type="reset" class="button" id="clearBtn" onclick="clearForm()">Clear</button>
         </div>
       </fieldset>
     </form>
