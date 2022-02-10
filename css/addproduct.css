@@ -20,8 +20,18 @@ legend {
   text-align: center;
 }
 
-#image-container {
+#image-container-preview {
   margin-top: 10px;
+  max-width: 400px;
+}
+
+#image-container-preview > .imgList {
+  padding-left: none;
+}
+
+#image-container-preview img {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .button {
