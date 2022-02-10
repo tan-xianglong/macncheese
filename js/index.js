@@ -12,6 +12,7 @@ const pdtImg = document.querySelector("image");
 const clearBtn = document.querySelector("#clearBtn");
 
 // Initialize global variables
+let checkBoxes;
 let checkboxChecked;
 let isCheckBoxChecked = false;
 // Initialize macNcheese product
@@ -25,9 +26,9 @@ const macNcheese = new Product();
 //event handler
 const disableChkbox = () => {
   if (chkbox_all.checked == true) {
-    chkbox_beef.checked = false;
-    chkbox_chicken.checked = false;
-    chkbox_seafood.checked = false;
+    chkbox_beef.checked = true;
+    chkbox_chicken.checked = true;
+    chkbox_seafood.checked = true;
     chkbox_beef.disabled = true;
     chkbox_chicken.disabled = true;
     chkbox_seafood.disabled = true;
@@ -35,6 +36,9 @@ const disableChkbox = () => {
     chkbox_beef.disabled = false;
     chkbox_chicken.disabled = false;
     chkbox_seafood.disabled = false;
+    chkbox_beef.checked = false;
+    chkbox_chicken.checked = false;
+    chkbox_seafood.checked = false;
   }
 };
 
@@ -75,13 +79,31 @@ const submitForm = () => {
       productDesc,
       price,
       quantity,
-      category,
+      checkboxChecked,
       image,
       createAt
     ); //category and image to work on it
     alert("Product has been added successfully.");
   }
 };
+
+const storeCheckBoxValue = () => {
+  checkBoxes = document.querySelectorAll("input[type=checkbox]");
+  checkBoxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function(){
+      checkboxChecked = Array.from(checkBoxes).filter(i => i.checked).map(j => j.value).filter(k => k != 'all');
+      console.log(checkboxChecked);
+      if(checkboxChecked.length == 0){
+        isCheckBoxChecked = false;
+      } else {
+        isCheckBoxChecked = true;
+      }
+    });
+  });
+  console.log(checkBoxes)
+};
+
+storeCheckBoxValue();
 
 //dummy data for productItem array
 macNcheese.addProduct(
