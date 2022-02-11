@@ -114,6 +114,8 @@
     <title>Our Products</title>
 </head>
 <body>
+
+   
     <!-- Header -->
         <!--Navigation Bar -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color:#F48B29">
@@ -156,25 +158,16 @@
     <!-- Section 1 End -->
 
     <!-- Section 2: Area for Product Cards and filter bar -->
-        <div class="container position-relative">
-            <div class="row">
-                <!-- Sticky Top Bar  -->
-                <div class="col-12 top-bar-container">
-                    <form>
-                        <label class="checkbox-inline" for="all">
-                          <input type="checkbox" id="all" name="all" value="all">All
-                        </label>
-                        <label class="checkbox-inline" for="beef">
-                          <input type="checkbox" id="beef" name="beef" value="beef">Beef
-                        </label>
-                        <label class="checkbox-inline" for="chicken"> 
-                          <input type="checkbox" id="chicken" name="chicken" value="chicken">Chicken
-                        </label>
-                        <label class="checkbox-inline" for="seafood">
-                            <input type="checkbox" id="seafood" name="seafood" value="seafood">Seafood
-                          </label>
-                    </form>
-                </div>
+    <div class="container position-relative">
+        <div class="row">
+            <!-- Sticky Top Bar  -->
+            <div class="col-12 top-bar-container">
+                    <button type="button" class="btn btn-outline-secondary"><span class="iconify" data-icon="noto-v1:shallow-pan-of-food" data-width="30" data-height="30"></span>All</button>
+                    <button type="button" class="btn btn-outline-secondary"><span class="iconify" data-icon="noto-v1:chicken" data-width="30" data-height="30"></span></i>Chicken</button>
+                    <button type="button" class="btn btn-outline-secondary"><span class="iconify" data-icon="noto:cow-face" data-width="30" data-height="30"></span>Beef</button>
+                    <button type="button" class="btn btn-outline-secondary"><span class="iconify" data-icon="noto:fish" data-width="30" data-height="30"></span>Seafood</button>
+                  </div>
+            </div>
                 <!-- End of Sticky Top Bar Filter -->
                 
                     <!-- Cards -->
@@ -309,6 +302,8 @@
     <!-- End of footer -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
 </body>
