@@ -1,4 +1,4 @@
-//initialize DOM elements for form items
+//initialize DOM elements
 
 const chkbox_beef = document.querySelector("#chkbox_beef");
 const chkbox_seafood = document.querySelector("#chkbox_seafood");
@@ -8,12 +8,13 @@ const pdtNameField = document.querySelector("#productName");
 const pdtDesc = document.querySelector("#productDesc");
 const pdtPrice = document.querySelector("#price");
 const pdtQuantity = document.querySelector("#quantity");
-const pdtImg = document.querySelector("image");
+const pdtImg = document.querySelector("#image");
 const clearBtn = document.querySelector("#clearBtn");
+const preview = document.querySelector("#image-container-preview");
 
 // Initialize global variables
 let checkBoxes;
-let checkboxChecked;
+let checkboxChecked = [];
 let isCheckBoxChecked = false;
 // Initialize macNcheese product
 const macNcheese = new Product();
@@ -47,15 +48,15 @@ chkbox_all.addEventListener("change", disableChkbox);
 
 //2. Clear form function
 const clearForm = () => {
-  chkbox_beef.reset();
-  chkbox_seafood.reset();
-  chkbox_chicken.reset();
-  chkbox_all.reset();
-  pdtNameField.reset();
-  pdtDesc.reset();
-  pdtPrice.reset();
-  pdtQuantity.reset();
-  pdtImg.reset();
+  chkbox_beef.checked = false;
+  chkbox_seafood.checked = false;
+  chkbox_chicken.checked = false;
+  chkbox_all.checked = false;
+  pdtNameField.value = "";
+  pdtDesc.value = "";
+  pdtPrice.value = "";
+  pdtQuantity.value = "";
+  pdtImg.value = "";
 };
 
 //3. submit form function to validate and store values
@@ -70,9 +71,6 @@ const submitForm = () => {
     let productDesc = pdtDesc.value;
     let price = pdtPrice.value;
     let quantity = pdtQuantity.value;
-    let catBeef = chkbox_beef.value;
-    let catSeafood = chkbox_seafood.value;
-    let catChicken = chkbox_chicken.value;
     let createAt = new Date();
     macNcheese.addProduct(
       productName,
@@ -83,10 +81,12 @@ const submitForm = () => {
       image,
       createAt
     ); //category and image to work on it
+    clearForm();
     alert("Product has been added successfully.");
   }
 };
 
+//4. detecting and storing category result
 const storeCheckBoxValue = () => {
   checkBoxes = document.querySelectorAll("input[type=checkbox]");
   checkBoxes.forEach(checkbox => {
@@ -97,6 +97,8 @@ const storeCheckBoxValue = () => {
         isCheckBoxChecked = false;
       } else {
         isCheckBoxChecked = true;
+        chkbox_beef.setCustomValidity("");
+        chkbox_beef.reportValidity();
       }
     });
   });
@@ -104,6 +106,70 @@ const storeCheckBoxValue = () => {
 };
 
 storeCheckBoxValue();
+
+//5. image preview display
+//initialize img file types
+const fileTypes = [
+  "image/apng",
+  "image/bmp",
+  "image/gif",
+  "image/jpeg",
+  "image/pjpeg",
+  "image/png",
+  "image/svg+xml",
+  "image/tiff",
+  "image/webp",
+  "image/x-icon"
+];
+//create img file type validation function
+const validFileType = (file) => {
+  return fileTypes.includes(file.type);
+};
+
+//create file size calculator function
+const returnFileSize = (number) => {
+  if(number < 1024) {
+    return number + 'bytes';
+  } else if(number >= 1024 && number < 1048576) {
+    return (number/1024).toFixed(1) + 'KB';
+  } else if(number >= 1048576) {
+    return (number/1048576).toFixed(1) + 'MB';
+  }
+};
+
+const updateImageDisplay = () => {
+  while(preview.firstChild) {
+    preview.removeChild(preview.firstChild);
+  };
+  const curFiles = pdtImg.files;
+  if (curFiles.length == 0) {
+    const para = document.createElement("p");
+    para.textContent = "";
+    preview.appendChild(para);
+  } else {
+    const list = document.createElement('ol');
+    preview.appendChild(list);
+    list.setAttribute("class", "imgList");
+    for(const file of curFiles) {
+      const listItem = document.createElement('li');
+      const para = document.createElement('p');
+      if(validFileType(file)) {
+        para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
+        const image = document.createElement('img');
+        image.src = URL.createObjectURL(file);
+        listItem.appendChild(image);
+        listItem.appendChild(para);
+      } else {
+        para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
+        listItem.appendChild(para);
+      }
+      list.appendChild(listItem);
+    }
+  }
+}
+
+pdtImg.addEventListener("change", updateImageDisplay);
+
 
 //dummy data for productItem array
 macNcheese.addProduct(

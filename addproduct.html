@@ -89,15 +89,14 @@
         </div>
         <label for="image" >Images:</label>
         <div>
-          <input type="file" id="image" name="image" multiple required/>
-          <div id="image-container">
-            <img id="imgPreview" src="./images/misc-DM-cropped.jpg" />
+          <input type="file" id="image" name="image" accept="image/*" multiple required/>
+          <div id="image-container-preview">
           </div>
         </div>
         <div></div>
         <div>
           <button type="submit" class="button" id="addBtn">Add</button>
-          <button type="reset" class="button" id="clearBtn" onclick="clearForm()">Clear</button>
+          <button type="reset" class="button" id="clearBtn">Clear</button>
         </div>
       </fieldset>
     </form>
