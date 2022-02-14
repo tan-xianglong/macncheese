@@ -31,12 +31,13 @@ class Product {
     this.productItems.forEach(item => {
       moreBtnId = "item" + index;
       productDetails += `
-      <div class="col-md-4 my-4">
+      <div class="col-6 col-md-4 my-4">
         <div class="card h-100">
             <img src="${item.image}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
-            <p class="card-text">${price}</p>
+            <p class="card-text">${item.price}</p>
+            <a id="${moreBtnId}" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">More</a>
             </div>
         </div>
       </div>      

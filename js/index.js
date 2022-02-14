@@ -194,7 +194,7 @@ macNcheese.addProduct(
 
 macNcheese.addProduct(
   "Supreme Mac N Cheese",
-  "It is supremem enough said. <br>Ingredients: Chicken and Seafood.",
+  "It is supreme enough said. <br>Ingredients: Chicken and Seafood.",
   "25.00",
   "10",
   "['chicken', 'seafood']",
