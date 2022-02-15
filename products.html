@@ -94,6 +94,10 @@
             margin-bottom: 0;
         }
 
+        /* Modal Image */
+        .modal-body > img {
+            max-height: 500px;
+        }
 
     /* Mobile Media Queries */
     @media screen and (max-width: 767px) {
@@ -177,26 +181,7 @@
                 
         <!-- Cards Start-->
         <div id="row" class="row"> 
-            <!-- <div class="col-6 col-md-4 my-4">
-                <div class="card h-100">
-                    <img src="${item.image}" class="card-img-top" alt="image">
-                    <div class="card-body">
-                        <h5 class="card-title">${item.name}</h5>
-                        <p class="card-text">${item.price}</p>
-                        <a id="${moreBtnId}" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">More</a>
-                    </div>
-                </div>
-            </div> -->
-            <div class="col-6 col-md-4 my-4">
-                <div class="card h-100">
-                    <img src="./images/pdt-top-image-pasta-bowl.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                        <a id="moreBtnId" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">More</a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
         <!-- Cards End -->
    
@@ -211,7 +196,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <img id="itemImage" src="./images/chicken.spicy.jpg" class="w-100 h-25" alt="Product Item Image">
+                    <img id="itemImage" src="" class="w-100 h-25" alt="Product Item Image">
                     <hr>
                     <b>Description: </b> <span id="itemDescription" class="mt-1">Mac</span>
                     <br />
