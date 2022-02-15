@@ -61,3 +61,6 @@ const displayItemDetails = (item) => {
   // document.querySelector("#itemDescription").innerText = item.description;
   // document.querySelector("#itemPrice").innerText = item.price;
 };
+
+// Initialize macNcheese product
+const macNcheese = new Product();
