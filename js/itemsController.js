@@ -55,12 +55,3 @@ class Product {
   } //end of displayProduct method
 } //end of class
 
-const displayItemDetails = (item) => {
-  // document.querySelector("#itemName").innerText = item.name;
-  // document.querySelector("#itemImage").innerText = item.image;
-  // document.querySelector("#itemDescription").innerText = item.description;
-  // document.querySelector("#itemPrice").innerText = item.price;
-};
-
-// Initialize macNcheese product
-const macNcheese = new Product();
