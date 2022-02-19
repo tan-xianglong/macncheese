@@ -32,6 +32,16 @@ macNcheese.addProduct(
   "today"
 );
 
+macNcheese.addProduct(
+  "Spicy Chicken Mac N Cheese",
+  "Not for the faint-hearted",
+  "25.00",
+  "5",
+  "['chicken']",
+  "./images/chicken.jpg",
+  "today"
+);
+
 const displayItemDetails = (item) => {
   document.querySelector("#itemName").innerText = item.name;
   document.querySelector("#itemImage").src = item.image;
