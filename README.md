@@ -50,8 +50,8 @@ Navbar with the menu options for each page:
 
 * Responsive behaviour:
 
- * Navbar-collapse:  automatically collapses at the lg (large) breakpoint
- * Navbar-toggler: use with collapse plugin to trigger hidden content elsewhere on the page and other navigation toggling behaviours
+ *  Navbar-collapse:  automatically collapses at the lg (large) breakpoint
+ *  Navbar-toggler: use with collapse plugin to trigger hidden content elsewhere on the page and other navigation toggling behaviours
  
 * Styling: 
 
@@ -61,12 +61,13 @@ Navbar with the menu options for each page:
 
 
 ***Mobile view***
-![navbar phone](https://user-images.githubusercontent.com/97433106/155013440-931b67bb-ffb6-4d27-a081-4a048ccb8a13.JPG)
 
+![navbar phone](https://user-images.githubusercontent.com/97433106/155013440-931b67bb-ffb6-4d27-a081-4a048ccb8a13.JPG)
 ![navbar phone expand](https://user-images.githubusercontent.com/97433106/155013476-3555e449-445b-4e85-b8ea-b6a780111ff6.JPG)
 
 
 ***Desktop view***
+
 ![navbar laptop ](https://user-images.githubusercontent.com/97433106/155011894-e913deb1-e9a8-4696-8afe-07d1f79faf50.jpg)
 G)
 
