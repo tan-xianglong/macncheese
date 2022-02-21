@@ -64,7 +64,26 @@ Static page that contains the following parts:
 ### Products
 Consumes API (POST and GET) and display information from database on the page.
 #### Features
-(To input special features of your page)
+A page for customers to view our range of products, get more information and add orders to their cart:
+* The core layout of the Product cards area is built utilising Bootstrap's grid system 
+    * Responsive display: 3 columns for desktop, 2 columns for mobile view
+* Product cards and information (Item image, Item name, Item price) are dynamically added to the page using JavaScript
+    * Using a forEach method to loop through Object instances, modifying properties via template literals and interpolation 
+    * Concatenating them to the page via HTML DOM manipulation
+* Product modals
+    * A forEach loop dynamically assigns unique IDs to each "More" button
+    * An event listener is appended to each "More" button
+    * When triggered, information is displayed dynamically on the modal via DOM manipulation 
+ 
+***Desktop view***
+
+![product_desktop_top](https://user-images.githubusercontent.com/29788431/154963574-24767ac5-37ec-47ec-9920-3b651f6e2520.png)
+![product_desktop_modal](https://user-images.githubusercontent.com/29788431/154963585-f786c7ac-a587-4274-9b88-0ba8995cd5e9.png)
+
+***Mobile view***
+
+![product_mobile_card](https://user-images.githubusercontent.com/29788431/154963654-9bcdc510-7e89-4e0d-8db1-71928a4ac52d.png)
+![product_mobile_modal](https://user-images.githubusercontent.com/29788431/154963725-1117bf6e-a377-42ac-9c42-e708adc946cc.png)
 
 ---
 
