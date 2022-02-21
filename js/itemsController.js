@@ -32,8 +32,8 @@ class Product {
       moreBtnId = "item" + index;
       productDetails += `
       <div class="col-6 col-md-4 my-4">
-        <div class="card h-100">
-            <img src="${item.image}" class="card-img-top h-50" alt="...">
+        <div class="card mh-100">
+            <img src="${item.image}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
             <p class="card-text">${item.price}</p>
