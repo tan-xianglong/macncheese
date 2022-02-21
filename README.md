@@ -45,10 +45,13 @@ A text only horizontal navigation bar helps users in selecting topics or links o
  *	About Us
  * Shop
  * Log in
+ *
 *Add a link to each menu item so it redirects to expected html page.
+
 *Responsive behaviour:
  *Navbar-collapse:  automatically collapses at the lg (large) breakpoint
  *Navbar-toggler: use with collapse plugin to trigger hidden content elsewhere on the page and other navigation toggling behaviours
+ 
 *Styling: 
 Font: -	Google Fonts API 
 Logo - @keyframes – CSS animation 
