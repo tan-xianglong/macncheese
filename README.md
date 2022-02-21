@@ -50,13 +50,13 @@ Navbar with the menu options for each page:
 
 * Responsive behaviour:
 
- *  Navbar-collapse:  automatically collapses at the lg (large) breakpoint
- *  Navbar-toggler: use with collapse plugin to trigger hidden content elsewhere on the page and other navigation toggling behaviours
+  *   Navbar-collapse:  automatically collapses at the lg (large) breakpoint
+  *   Navbar-toggler: use with collapse plugin to trigger hidden content elsewhere on the page and other navigation toggling behaviours
  
 * Styling: 
 
- * Font: -	Google Fonts API 
- * Logo - @keyframes – CSS animation 
+  *  Font: -	Google Fonts API 
+  *  Logo - @keyframes – CSS animation 
 
 
 
