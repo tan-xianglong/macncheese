@@ -40,23 +40,23 @@ Frontend: JavaScript + CSS + HTML.
 A text only horizontal navigation bar helps users in selecting topics or links of their interest.
 
 #### Features
-* Navbar with the menu options for each page:
+Navbar with the menu options for each page:
  *	Home
  *	About Us
  * Shop
  * Log in
  
-*Add a link to each menu item so it redirects to expected html page.
+* Add a link to each menu item so it redirects to expected html page.
 
-*Responsive behaviour:
+* Responsive behaviour:
 
- *Navbar-collapse:  automatically collapses at the lg (large) breakpoint
- *Navbar-toggler: use with collapse plugin to trigger hidden content elsewhere on the page and other navigation toggling behaviours
+ * Navbar-collapse:  automatically collapses at the lg (large) breakpoint
+ * Navbar-toggler: use with collapse plugin to trigger hidden content elsewhere on the page and other navigation toggling behaviours
  
-*Styling: 
+* Styling: 
 
-Font: -	Google Fonts API 
-Logo - @keyframes – CSS animation 
+ * Font: -	Google Fonts API 
+ * Logo - @keyframes – CSS animation 
 
 
 
