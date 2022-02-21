@@ -56,7 +56,7 @@ Logo - @keyframes – CSS animation
 
 
 ***Mobile view***
-![navbar phone](https://user-images.githubusercontent.com/97433106/155011882-1095491b-3cad-4e2b-ae42-78c30bfe9a35.JP
+![navbar phone](https://user-images.githubusercontent.com/97433106/155011882-1095491b-3cad-4e2b-ae42-78c30bfe9a35.JPG]
 ![navbar phone expand](https://user-images.githubusercontent.com/97433106/155011888-9459028b-673f-40f2-819a-80c03db24b25.JPG)
 
 ***Desktop view***
