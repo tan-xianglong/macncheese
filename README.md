@@ -87,7 +87,7 @@ Static page that contains the following parts:
 * Team profiles (short bio, photo and role in the project)
 
 #### Features
-* Design application’s wireframes better understanding of how the application will work and look by using Moqups
+* Design application’s wireframes on ow the application will work and look by using Moqups
 * Bootstrap - card componet was selected as according to our wireframes structure which created
 * Open html file on browser and verify it looks and works as expected
 * Responsive display:
