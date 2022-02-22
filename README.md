@@ -94,9 +94,14 @@ Static page that contains the following parts:
    * Bootstrap's Grid system - 2 columns for desktop, 1 column for mobile view, breakpoint : lg (large)992px
 
 ***Desktop view***
+
 ![aboutus laptop](https://user-images.githubusercontent.com/97433106/155097988-7a72fd3b-3325-4b1c-ad84-7a75a9ed5489.JPG)
 
+
+
+
 ***Mobile view***
+
 ![aboutus mobile](https://user-images.githubusercontent.com/97433106/155098000-162a2954-4280-4437-8980-4c02ba978752.JPG)
 
 
