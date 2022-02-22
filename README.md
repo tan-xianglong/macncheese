@@ -123,10 +123,12 @@ A page for customers to view our range of products, get more information and add
     * An event listener is appended to each "More" button
     * When triggered, information is displayed dynamically on the modal via DOM manipulation 
 * Dynamic Filter
--	narrows search results or listings on a product category page
+    * narrows search results or listings on a product category page
     * User can filter using category. Four filter buttons: “All”, “Chicken”, “Beef” & “Seafood”, one button for each category.
     * onclick event executed when the user clicked on any of the filter button, the option will be pass in as parameter on method filterCat(). 
     * Products are filtered and displayed dynamically
+    * Styling: icon - Iconify API
+
 
  
 ***Desktop view***
