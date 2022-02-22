@@ -69,7 +69,7 @@ Navbar with the menu options for each page:
 ***Desktop view***
 
 ![navbar laptop ](https://user-images.githubusercontent.com/97433106/155011894-e913deb1-e9a8-4696-8afe-07d1f79faf50.jpg)
-G)
+
 
 
 ---
@@ -87,7 +87,12 @@ Static page that contains the following parts:
 * Team profiles (short bio, photo and role in the project)
 
 #### Features
-(To input special features of your page)
+* Design application’s wireframes better understanding of how the application will work and look by using Moqups
+* Bootstrap - card componet was selected as according to our wireframes structure which created
+* Open html file on browser and verify it looks and works as expected
+* Responsive display:
+   * Bootstrap's Grid system - 2 columns for desktop, 1 column for mobile view  
+
 
 ---
 
