@@ -50,7 +50,7 @@ Navbar with the menu options for each page:
 
 * Responsive behaviour:
 
-  *   Navbar-collapse:  automatically collapses at the lg (large) breakpoint
+  *   Navbar-collapse:  automatically collapses at the lg (large) 992px breakpoint 
   *   Navbar-toggler: use with collapse plugin to trigger hidden content elsewhere on the page and other navigation toggling behaviours
  
 * Styling: 
@@ -91,7 +91,7 @@ Static page that contains the following parts:
 * Bootstrap - card componet was selected as according to our wireframes structure which created
 * Open html file on browser and verify it looks and works as expected
 * Responsive display:
-   * Bootstrap's Grid system - 2 columns for desktop, 1 column for mobile view  
+   * Bootstrap's Grid system - 2 columns for desktop, 1 column for mobile view, breakpoint : lg (large)992px
 
 
 ---
