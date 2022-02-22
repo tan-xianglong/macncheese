@@ -93,6 +93,14 @@ Static page that contains the following parts:
 * Responsive display:
    * Bootstrap's Grid system - 2 columns for desktop, 1 column for mobile view, breakpoint : lg (large)992px
 
+***Desktop view***
+![aboutus laptop](https://user-images.githubusercontent.com/97433106/155097988-7a72f
+
+***Mobile view***
+![aboutus mobile](https://user-images.githubusercontent.com/97433106/155098000-162a2954-4280-4437-8980-4c02ba978752.JPG)
+d3b-3325-4b1c-ad84-7a75a9ed5489.JPG)
+
+
 
 ---
 
@@ -109,6 +117,12 @@ A page for customers to view our range of products, get more information and add
     * A forEach loop dynamically assigns unique IDs to each "More" button
     * An event listener is appended to each "More" button
     * When triggered, information is displayed dynamically on the modal via DOM manipulation 
+* Dynamic Filter
+-	narrows search results or listings on a product category page
+    * User can filter using category. Four filter buttons: “All”, “Chicken”, “Beef” & “Seafood”, one button for each category.
+    * onclick event executed when the user clicked on any of the filter button, the option will be pass in as parameter on method filterCat(). 
+    * Products are filtered and displayed dynamically
+
  
 ***Desktop view***
 
