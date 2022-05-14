@@ -2,7 +2,7 @@
 
 This is the final project assignment for the SG United Mid-Career Pathways Program - Company Training (SGUP-CT) which is collaboratively developed by 4 team members.
 
-Visit [Mac & Cheese Store](https://google.com) to see the full site.
+Visit [Mac & Cheese Store](https://macncheese.herokuapp.com) to see the full site.
 
 ## Table of Contents
 * [General Information](#general-information)
